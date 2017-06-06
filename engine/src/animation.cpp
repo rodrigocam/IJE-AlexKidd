@@ -92,6 +92,7 @@ namespace engine{
     }
 
     void Animation::setInterval(std::string action){
+        curAction = action;
         if(action != interval.first){
             startTime = SDL_GetTicks();
             stepTime = startTime;
@@ -117,5 +118,9 @@ namespace engine{
 
     void Animation::addAction(std::string name_action, int initial, int last){
       list_actions[name_action] = std::pair<int, int>(initial, last);
+    }
+
+    std::string Animation::getCurAction(){
+        return curAction;
     }
 }

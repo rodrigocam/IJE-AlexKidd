@@ -24,14 +24,7 @@ void GameScene::update(double timeElapsed){
 
 void GameScene::load(){
     stageBackgroundList.push_back(new StageBackground("assets/sprites/stage_background/complete.png", 0));
-
-    //stageBackgroundList.push_back(new StageBackground("assets/sprites/stage_background/stage1_B.png", 640));
-
-    //stageBackgroundList.push_back(new StageBackground("assets/sprites/stage_background/stage1_C.png", 1280));
-
-    //stageBackgroundList.push_back(new StageBackground("assets/sprites/stage_background/stage1_D.png", 1920));
-
-    //stageBackgroundList.push_back(new StageBackground("assets/sprites/stage_background/stage1_E.png", 2560));
+    gameObjectsList.push_back(new Player("assets/sprites/ALEX2.png", 20, 325, 20, 20));
 
 }
 

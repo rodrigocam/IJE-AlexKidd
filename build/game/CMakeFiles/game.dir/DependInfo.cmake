@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/game_scene.cpp" "/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game/CMakeFiles/game.dir/src/game_scene.cpp.o"
+  "/home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/player.cpp" "/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game/CMakeFiles/game.dir/src/player.cpp.o"
   "/home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/stage_background.cpp" "/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game/CMakeFiles/game.dir/src/stage_background.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -4,6 +4,7 @@
 #include "engine.hpp"
 #include "scene.hpp"
 #include "stage_background.hpp"
+#include "player.hpp"
 
 using namespace engine;
 
@@ -18,6 +19,7 @@ public:
 private:
     std::vector<GameObject*> gameObjectsList;
     std::vector<StageBackground*> stageBackgroundList;
+    Player* player;
 };
 
 #endif

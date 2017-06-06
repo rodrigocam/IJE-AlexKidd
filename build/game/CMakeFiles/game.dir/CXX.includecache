@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../engine/include/animation.hpp
+sprite.hpp
+../engine/include/sprite.hpp
+unordered_map
+-
+
 ../engine/include/engine.hpp
 utility
 -
@@ -93,6 +99,18 @@ scene.hpp
 ../game/include/scene.hpp
 stage_background.hpp
 ../game/include/stage_background.hpp
+player.hpp
+../game/include/player.hpp
+
+../game/include/player.hpp
+engine.hpp
+../game/include/engine.hpp
+game_object.hpp
+../game/include/game_object.hpp
+animation.hpp
+../game/include/animation.hpp
+input_manager.hpp
+../game/include/input_manager.hpp
 
 ../game/include/stage_background.hpp
 engine.hpp
@@ -111,6 +129,10 @@ game_scene.hpp
 /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/game_scene.hpp
 typeinfo
 -
+
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/player.cpp
+player.hpp
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/player.hpp
 
 /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/stage_background.cpp
 stage_background.hpp

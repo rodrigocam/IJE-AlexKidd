@@ -152,6 +152,33 @@ src/game_scene.cpp.s:
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/game_scene.cpp.s
 .PHONY : src/game_scene.cpp.s
 
+src/player.o: src/player.cpp.o
+
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.cpp.o:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/player.cpp.o
+.PHONY : src/player.cpp.o
+
+src/player.i: src/player.cpp.i
+
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cpp.i:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/player.cpp.i
+.PHONY : src/player.cpp.i
+
+src/player.s: src/player.cpp.s
+
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cpp.s:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/player.cpp.s
+.PHONY : src/player.cpp.s
+
 src/stage_background.o: src/stage_background.cpp.o
 
 .PHONY : src/stage_background.o
@@ -191,6 +218,9 @@ help:
 	@echo "... src/game_scene.o"
 	@echo "... src/game_scene.i"
 	@echo "... src/game_scene.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
 	@echo "... src/stage_background.o"
 	@echo "... src/stage_background.i"
 	@echo "... src/stage_background.s"

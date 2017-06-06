@@ -27,7 +27,6 @@ void StageBackground::moveBackground(double & increment){
     }
     else if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_LEFT)){
         if(getSpritePosition() < 0){
-            std::cout << "LIXO "<<std::endl;
             increment = increment;
         }else{
             increment = 0;
