@@ -18,25 +18,24 @@ Player::Player(std::string spritePath, int positionX, int positionY,
 
     idleAnimationNumber = 0;
     idleDownAnimationNumber = 15;
+    isStanding = true;
+    blockChangeDirection = false;
 }
 
 Player::~Player(){}
 
 void Player::update(double timeElapsed){
-    auto incY = 0.15*timeElapsed;
-    auto incX = 0.15*timeElapsed;
+    double incX;
 
-    walkInX(incX);
-    layDown(incX);
-    //walkInY(incY, incX);
-
-    if(incX == 0 && incY == 0){
-        if(idleAnimationNumber == 0){
-          animator->setInterval("idle_right");
-        }else{
-          animator->setInterval("idle_left");
-        }
+    if(isStanding){
+        incX = 0.10*timeElapsed;
+    }else{
+        incX = 0.05*timeElapsed;
     }
+
+    verifyLayDown();
+    walkInX(incX);
+
     animator->update();
 }
 
@@ -48,68 +47,41 @@ void Player::walkInX(double & incX){
     if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_RIGHT)){
         incX = incX;
         idleAnimationNumber = 0;
-        idleDownAnimationNumber = 15;
-        if(animator->getCurAction().compare("down_idle_right") == 0 ||
-           animator->getCurAction().compare("downRight") == 0){
-            std::cout << "LALA" << std::endl;
-            animator->setInterval("downRight");
-        }else{
+        if(isStanding){
             animator->setInterval("right");
+        }else{
+            animator->setInterval("downRight");
         }
     }
     else if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_LEFT)){
         incX = incX * (0-1);
-        idleAnimationNumber = 23;
-        idleDownAnimationNumber = 33;
-        if(animator->getCurAction().compare("down_idle_left") == 0){
-            animator->setInterval("downLeft");
-        }else{
+        idleAnimationNumber = 15;
+        if(isStanding){
             animator->setInterval("left");
+        }else{
+            animator->setInterval("downLeft");
         }
-    }
-    else {
+    }else {
         incX = 0;
         if(idleAnimationNumber == 0){
             animator->setInterval("idle_right");
+            if(!isStanding){
+                animator->setInterval("down_idle_right");
+            }
         }else{
             animator->setInterval("idle_left");
+            if(!isStanding){
+                animator->setInterval("down_idle_left");
+            }
         }
     }
     setPositionX(getPositionX()+incX);
 }
 
-void Player::walkInY(double & incY, double incX){
-    if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_UP)){
-        incY = incY * (0-1);
-        idleAnimationNumber = 5;
-        if(incX == 0){
-            animator->setInterval("up");
-        }
-    }
-    else if(engine::InputManager::instance.isKeyPressed(engine::InputManager::KeyPress::KEY_PRESS_DOWN)){
-        incY = incY;
-        idleAnimationNumber = 0;
-        if(incX == 0){
-            animator->setInterval("down");
-        }
-    }
-    else {
-        incY = 0;
-    }
-    setPositionY(getPositionY()+incY);
-}
-
-void Player::layDown(double & incX){
+void Player::verifyLayDown(){
     if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_DOWN)){
-        if(idleDownAnimationNumber == 15){
-            animator->setInterval("down_idle_right");
-        }else{
-            animator->setInterval("down_idle_left");
-        }
-        if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_RIGHT)){
-            animator->setInterval("downRight");
-        }else if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_LEFT)){
-            animator->setInterval("downLeft");
-        }
+        isStanding = false;
+    }else if(InputManager::instance.isKeyReleased(InputManager::KeyPress::KEY_PRESS_DOWN)){
+        isStanding = true;
     }
 }

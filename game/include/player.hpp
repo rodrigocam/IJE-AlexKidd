@@ -17,11 +17,12 @@ public:
 
 private:
     Animation* animator;
+    bool isStanding;
+    bool blockChangeDirection;
     int idleAnimationNumber;
     int idleDownAnimationNumber;
     void walkInX(double & incX);
-    void walkInY(double & incY, double incX);
-    void layDown(double & incX);
+    void verifyLayDown();
 };
 
 #endif
