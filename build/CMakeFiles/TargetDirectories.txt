@@ -1,0 +1,9 @@
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles/rebuild_cache.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles/edit_cache.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles/alex.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine/CMakeFiles/edit_cache.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine/CMakeFiles/rebuild_cache.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine/CMakeFiles/engine.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game/CMakeFiles/edit_cache.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game/CMakeFiles/rebuild_cache.dir
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game/CMakeFiles/game.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++     -std=c++11 -W -Wall -pedantic -std=c++11 -Wshadow -O2 -g   CMakeFiles/conspiracy.dir/src/main.cpp.o  -o conspiracy -rdynamic engine/libengine.a game/libgame.a -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer 

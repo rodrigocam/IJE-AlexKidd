@@ -10,8 +10,8 @@ namespace engine{
 
     class Sprite{
     public:
-        Sprite(){}
         Sprite(std::string newDirectory);
+        Sprite(){}
         virtual ~Sprite(){}
 
         virtual void init();

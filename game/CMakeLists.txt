@@ -8,4 +8,6 @@ file(GLOB_RECURSE SOURCES "${PROJECT_SRC_DIR}/*.cpp" "${PROJECT_SRC_DIR}/*.c")
 
 include_directories("${GAME_INCLUDE_DIR}")
 
-add_library(engine STATIC ${SOURCES})
+add_library(game STATIC ${SOURCES})
+
+target_link_libraries(game engine)
