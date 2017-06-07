@@ -4,6 +4,7 @@
 #include "engine.hpp"
 #include "input_manager.hpp"
 #include "sprite.hpp"
+#include "player.hpp"
 
 #include <iostream>
 #include <string>
@@ -12,7 +13,7 @@ using namespace engine;
 
 class StageBackground{
 public:
-    StageBackground(std::string spritePath, int initialPosition);
+    StageBackground(std::string spritePath, int initialPosition, Player *player);
     ~StageBackground();
     void update(double timeElapsed);
     void draw();
@@ -21,6 +22,7 @@ public:
 
 private:
     Sprite *sprite;
+    Player *playerReference;
     int spritePosition;
     void moveBackground(double &increment);
 };

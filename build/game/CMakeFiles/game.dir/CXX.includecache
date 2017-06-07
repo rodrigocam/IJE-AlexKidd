@@ -119,6 +119,8 @@ input_manager.hpp
 ../game/include/input_manager.hpp
 sprite.hpp
 ../game/include/sprite.hpp
+player.hpp
+../game/include/player.hpp
 iostream
 -
 string

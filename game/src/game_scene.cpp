@@ -23,9 +23,11 @@ void GameScene::update(double timeElapsed){
 }
 
 void GameScene::load(){
-    stageBackgroundList.push_back(new StageBackground("assets/sprites/stage_background/complete.png", 0));
-    gameObjectsList.push_back(new Player("assets/sprites/ALEX2.png", 20, 325, 20, 20));
+    player = new Player("assets/sprites/ALEX2.png", 20, 325, 20, 20);
+    stageOneBackground = new StageBackground("assets/sprites/stage_background/complete.png", 0, player);
 
+    gameObjectsList.push_back(player);
+    stageBackgroundList.push_back(stageOneBackground);
 }
 
 void GameScene::unload(){

@@ -20,6 +20,7 @@ private:
     std::vector<GameObject*> gameObjectsList;
     std::vector<StageBackground*> stageBackgroundList;
     Player* player;
+    StageBackground *stageOneBackground;
 };
 
 #endif

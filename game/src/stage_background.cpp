@@ -1,8 +1,9 @@
 #include "stage_background.hpp"
 
-StageBackground::StageBackground(std::string spritePath, int initialPosition){
+StageBackground::StageBackground(std::string spritePath, int initialPosition, Player *player){
     sprite = new Sprite(spritePath);
     spritePosition = initialPosition;
+    playerReference = player;
 }
 
 StageBackground::~StageBackground(){}
@@ -12,23 +13,34 @@ void StageBackground::draw(){
 }
 
 void StageBackground::update(double timeElapsed){
-    auto increment = 0.15*timeElapsed;
+    double increment;
+    if(playerReference->getPlayerStatus().compare("standing") == 0){
+        increment = 0.20*timeElapsed;
+    }else{
+        increment = 0.10*timeElapsed;
+    }
     moveBackground(increment);
     draw();
 }
 
 void StageBackground::moveBackground(double & increment){
-    if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_RIGHT)){
+    if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_RIGHT) &&
+       playerReference->getPositionX() >= 400){
         if(getSpritePosition() > -2560 ){
+            playerReference->blockMovement();
             increment = increment * (0-1);
         }else{
+            playerReference->unblockMovement();
             increment = 0;
         }
     }
-    else if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_LEFT)){
+    else if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_LEFT) &&
+            playerReference->getPositionX() >= 350){
         if(getSpritePosition() < 0){
+            playerReference->blockMovement();
             increment = increment;
         }else{
+            playerReference->unblockMovement();
             increment = 0;
         }
     }

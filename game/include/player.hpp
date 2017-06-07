@@ -14,11 +14,16 @@ public:
     ~Player();
     void update(double timeElapsed);
     void draw();
+    void blockMovement();
+    void unblockMovement();
+    std::string getPlayerStatus();
 
 private:
     Animation* animator;
     bool isStanding;
+    bool movingToRight;
     bool blockChangeDirection;
+    bool movementIsBlock;
     int idleAnimationNumber;
     int idleDownAnimationNumber;
     void walkInX(double & incX);

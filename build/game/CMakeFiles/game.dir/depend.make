@@ -31,6 +31,7 @@ game/CMakeFiles/game.dir/src/player.cpp.o: ../engine/include/window_manager.hpp
 game/CMakeFiles/game.dir/src/player.cpp.o: ../game/include/player.hpp
 game/CMakeFiles/game.dir/src/player.cpp.o: ../game/src/player.cpp
 
+game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/animation.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/engine.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/game_object.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/input_manager.hpp
@@ -41,6 +42,7 @@ game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/sdl2inclu
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/sdl_manager.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/sprite.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../engine/include/window_manager.hpp
+game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../game/include/player.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../game/include/stage_background.hpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../game/src/stage_background.cpp
 

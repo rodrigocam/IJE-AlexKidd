@@ -32,6 +32,7 @@ game/CMakeFiles/game.dir/src/player.cpp.o
  ../game/include/player.hpp
  /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/player.cpp
 game/CMakeFiles/game.dir/src/stage_background.cpp.o
+ ../engine/include/animation.hpp
  ../engine/include/engine.hpp
  ../engine/include/game_object.hpp
  ../engine/include/input_manager.hpp
@@ -42,5 +43,6 @@ game/CMakeFiles/game.dir/src/stage_background.cpp.o
  ../engine/include/sdl_manager.hpp
  ../engine/include/sprite.hpp
  ../engine/include/window_manager.hpp
+ ../game/include/player.hpp
  ../game/include/stage_background.hpp
  /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/stage_background.cpp
