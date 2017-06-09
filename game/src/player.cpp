@@ -81,9 +81,9 @@ void Player::walkInX(double & incX){
             movingToRight = false;
         }
     }
-    if(movingToRight && getPositionX() >= 400 && movementIsBlock){
+    if(movingToRight && getPositionX() >= 350 && movementIsBlock){
         incX = 0;
-    }else if(!movingToRight && getPositionX() >= 240 && movementIsBlock){
+    }else if(!movingToRight && getPositionX() <= 300 && movementIsBlock){
         incX = 0;
     }
     setPositionX(getPositionX()+incX);

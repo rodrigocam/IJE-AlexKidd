@@ -25,7 +25,7 @@ void StageBackground::update(double timeElapsed){
 
 void StageBackground::moveBackground(double & increment){
     if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_RIGHT) &&
-       playerReference->getPositionX() >= 400){
+       playerReference->getPositionX() >= 350){
         if(getSpritePosition() > -2560 ){
             playerReference->blockMovement();
             increment = increment * (0-1);
@@ -35,7 +35,7 @@ void StageBackground::moveBackground(double & increment){
         }
     }
     else if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_LEFT) &&
-            playerReference->getPositionX() >= 350){
+            playerReference->getPositionX() <= 300){
         if(getSpritePosition() < 0){
             playerReference->blockMovement();
             increment = increment;
