@@ -47,7 +47,16 @@ engine/CMakeFiles/engine.dir/src/game_object.cpp.o: ../engine/include/game_objec
 engine/CMakeFiles/engine.dir/src/game_object.cpp.o: ../engine/include/log.h
 engine/CMakeFiles/engine.dir/src/game_object.cpp.o: ../engine/include/sdl2includes.hpp
 engine/CMakeFiles/engine.dir/src/game_object.cpp.o: ../engine/include/sprite.hpp
+engine/CMakeFiles/engine.dir/src/game_object.cpp.o: ../engine/include/window_manager.hpp
 engine/CMakeFiles/engine.dir/src/game_object.cpp.o: ../engine/src/game_object.cpp
+
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/include/game_object.hpp
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/include/ground.hpp
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/include/log.h
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/include/sdl2includes.hpp
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/include/sprite.hpp
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/include/window_manager.hpp
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/src/ground.cpp
 
 engine/CMakeFiles/engine.dir/src/input_manager.cpp.o: ../engine/include/input_manager.hpp
 engine/CMakeFiles/engine.dir/src/input_manager.cpp.o: ../engine/include/log.h
@@ -59,6 +68,7 @@ engine/CMakeFiles/engine.dir/src/scene.cpp.o: ../engine/include/log.h
 engine/CMakeFiles/engine.dir/src/scene.cpp.o: ../engine/include/scene.hpp
 engine/CMakeFiles/engine.dir/src/scene.cpp.o: ../engine/include/sdl2includes.hpp
 engine/CMakeFiles/engine.dir/src/scene.cpp.o: ../engine/include/sprite.hpp
+engine/CMakeFiles/engine.dir/src/scene.cpp.o: ../engine/include/window_manager.hpp
 engine/CMakeFiles/engine.dir/src/scene.cpp.o: ../engine/src/scene.cpp
 
 engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/include/game_object.hpp
@@ -67,6 +77,7 @@ engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/include/scene.hp
 engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/include/scene_manager.hpp
 engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/include/sdl2includes.hpp
 engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/include/sprite.hpp
+engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/include/window_manager.hpp
 engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o: ../engine/src/scene_manager.cpp
 
 engine/CMakeFiles/engine.dir/src/sdl_manager.cpp.o: ../engine/include/log.h

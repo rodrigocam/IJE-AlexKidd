@@ -260,6 +260,33 @@ src/game_object.cpp.s:
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/game_object.cpp.s
 .PHONY : src/game_object.cpp.s
 
+src/ground.o: src/ground.cpp.o
+
+.PHONY : src/ground.o
+
+# target to build an object file
+src/ground.cpp.o:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/ground.cpp.o
+.PHONY : src/ground.cpp.o
+
+src/ground.i: src/ground.cpp.i
+
+.PHONY : src/ground.i
+
+# target to preprocess a source file
+src/ground.cpp.i:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/ground.cpp.i
+.PHONY : src/ground.cpp.i
+
+src/ground.s: src/ground.cpp.s
+
+.PHONY : src/ground.s
+
+# target to generate assembly for a file
+src/ground.cpp.s:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/ground.cpp.s
+.PHONY : src/ground.cpp.s
+
 src/input_manager.o: src/input_manager.cpp.o
 
 .PHONY : src/input_manager.o
@@ -473,6 +500,9 @@ help:
 	@echo "... src/game_object.o"
 	@echo "... src/game_object.i"
 	@echo "... src/game_object.s"
+	@echo "... src/ground.o"
+	@echo "... src/ground.i"
+	@echo "... src/ground.s"
 	@echo "... src/input_manager.o"
 	@echo "... src/input_manager.i"
 	@echo "... src/input_manager.s"

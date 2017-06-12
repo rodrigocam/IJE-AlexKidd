@@ -5,6 +5,7 @@
 #include "game_object.hpp"
 #include "animation.hpp"
 #include "input_manager.hpp"
+#include "collision_manager.hpp"
 
 using namespace engine;
 
@@ -26,7 +27,8 @@ private:
     bool movementIsBlock;
     int idleAnimationNumber;
     int idleDownAnimationNumber;
-    void walkInX(double & incX);
+    void walkInX(double & incX, double & incY);
+    void walkInY(double & incX, double & incY);
     void verifyLayDown();
 };
 

@@ -11,13 +11,30 @@ GameObject::GameObject(std::string objectName, double positionX, double position
         setWidth(width);
         setHeight(height);
         setEnabled(true);
+        rect = new SDL_Rect();
+}
+
+GameObject::GameObject(double positionX, double positionY,int width, int height){
+    setPositionX(positionX);
+    setPositionY(positionY);
+    setWidth(width);
+    setHeight(height);
+    setEnabled(true);
+    rect = new SDL_Rect();
 }
 
 GameObject::GameObject(){}
 
 GameObject::~GameObject(){}
 
-//void GameObject::update(double timeElapsed){}
+void GameObject::draw(int x, int y){
+    SDL_SetRenderDrawColor(WindowManager::getGameCanvas(), 255, 0, 0, 255);
+    rect->x = x;
+    rect->y = y;
+    rect->w = getWidth();
+    rect->h = getHeight();
+    SDL_RenderDrawRect(WindowManager::getGameCanvas(), rect);
+}
 
 std::string GameObject::getName(){
     return name;

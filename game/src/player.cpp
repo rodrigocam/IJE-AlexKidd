@@ -28,6 +28,7 @@ Player::~Player(){}
 
 void Player::update(double timeElapsed){
     double incX;
+    double incY = 0.15*timeElapsed;
 
     if(isStanding){
         incX = 0.25*timeElapsed;
@@ -36,7 +37,8 @@ void Player::update(double timeElapsed){
     }
 
     verifyLayDown();
-    walkInX(incX);
+    walkInY(incX, incY);
+    walkInX(incX, incY);
 
     animator->update();
 }
@@ -45,7 +47,7 @@ void Player::draw(){
     animator->draw(getPositionX(), getPositionY());
 }
 
-void Player::walkInX(double & incX){
+void Player::walkInX(double & incX, double &incY){
     if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_RIGHT)){
         incX = incX;
         idleAnimationNumber = 0;
@@ -87,6 +89,22 @@ void Player::walkInX(double & incX){
         incX = 0;
     }
     setPositionX(getPositionX()+incX);
+    if(/*CollisionManager::instance.verifyCollisionWithWalls(this) ||*/
+       CollisionManager::instance.verifyCollisionWithGround(this)){
+        //std::cout << "AQ" << std::endl;
+        setPositionX(getPositionX()+(incX*(0-1)));
+    }
+    // if(!CollisionManager::instance.verifyCollisionWithGround(this)){
+    //     setPositionY(getPositionY()+(incY*(0+1)));
+    // }
+}
+
+void Player::walkInY(double & incX, double & incY){
+    setPositionY(getPositionY()+incY);
+    if(CollisionManager::instance.verifyCollisionWithGround(this)){
+        setPositionY(getPositionY()+(incY*(0-1)));
+        //walkInX(incX, incY);
+    }
 }
 
 void Player::verifyLayDown(){

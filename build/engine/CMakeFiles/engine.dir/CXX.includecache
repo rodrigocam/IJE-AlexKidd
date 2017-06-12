@@ -21,6 +21,8 @@ string
 ../engine/include/collision_manager.hpp
 vector
 -
+stdlib.h
+-
 engine.hpp
 ../engine/include/engine.hpp
 game_object.hpp
@@ -51,6 +53,16 @@ string
 -
 sprite.hpp
 ../engine/include/sprite.hpp
+window_manager.hpp
+../engine/include/window_manager.hpp
+sdl2includes.hpp
+../engine/include/sdl2includes.hpp
+
+../engine/include/ground.hpp
+game_object.hpp
+../engine/include/game_object.hpp
+utility
+-
 
 ../engine/include/input_manager.hpp
 sdl2includes.hpp
@@ -171,6 +183,10 @@ game_object.hpp
 /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/game_object.hpp
 log.h
 /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/log.h
+
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/ground.cpp
+ground.hpp
+/home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/ground.hpp
 
 /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/input_manager.cpp
 input_manager.hpp

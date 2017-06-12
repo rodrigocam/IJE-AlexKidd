@@ -48,7 +48,16 @@ engine/CMakeFiles/engine.dir/src/game_object.cpp.o
  ../engine/include/log.h
  ../engine/include/sdl2includes.hpp
  ../engine/include/sprite.hpp
+ ../engine/include/window_manager.hpp
  /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/game_object.cpp
+engine/CMakeFiles/engine.dir/src/ground.cpp.o
+ ../engine/include/game_object.hpp
+ ../engine/include/ground.hpp
+ ../engine/include/log.h
+ ../engine/include/sdl2includes.hpp
+ ../engine/include/sprite.hpp
+ ../engine/include/window_manager.hpp
+ /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/ground.cpp
 engine/CMakeFiles/engine.dir/src/input_manager.cpp.o
  ../engine/include/input_manager.hpp
  ../engine/include/log.h
@@ -60,6 +69,7 @@ engine/CMakeFiles/engine.dir/src/scene.cpp.o
  ../engine/include/scene.hpp
  ../engine/include/sdl2includes.hpp
  ../engine/include/sprite.hpp
+ ../engine/include/window_manager.hpp
  /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/scene.cpp
 engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o
  ../engine/include/game_object.hpp
@@ -68,6 +78,7 @@ engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o
  ../engine/include/scene_manager.hpp
  ../engine/include/sdl2includes.hpp
  ../engine/include/sprite.hpp
+ ../engine/include/window_manager.hpp
  /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/scene_manager.cpp
 engine/CMakeFiles/engine.dir/src/sdl_manager.cpp.o
  ../engine/include/log.h

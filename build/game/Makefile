@@ -206,6 +206,33 @@ src/stage_background.cpp.s:
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/stage_background.cpp.s
 .PHONY : src/stage_background.cpp.s
 
+src/wall.o: src/wall.cpp.o
+
+.PHONY : src/wall.o
+
+# target to build an object file
+src/wall.cpp.o:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/wall.cpp.o
+.PHONY : src/wall.cpp.o
+
+src/wall.i: src/wall.cpp.i
+
+.PHONY : src/wall.i
+
+# target to preprocess a source file
+src/wall.cpp.i:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/wall.cpp.i
+.PHONY : src/wall.cpp.i
+
+src/wall.s: src/wall.cpp.s
+
+.PHONY : src/wall.s
+
+# target to generate assembly for a file
+src/wall.cpp.s:
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/wall.cpp.s
+.PHONY : src/wall.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -224,6 +251,9 @@ help:
 	@echo "... src/stage_background.o"
 	@echo "... src/stage_background.i"
 	@echo "... src/stage_background.s"
+	@echo "... src/wall.o"
+	@echo "... src/wall.i"
+	@echo "... src/wall.s"
 .PHONY : help
 
 

@@ -57,9 +57,33 @@ include game/CMakeFiles/game.dir/progress.make
 # Include the compile flags for this target's objects.
 include game/CMakeFiles/game.dir/flags.make
 
+game/CMakeFiles/game.dir/src/wall.cpp.o: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/src/wall.cpp.o: ../game/src/wall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object game/CMakeFiles/game.dir/src/wall.cpp.o"
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/wall.cpp.o -c /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/wall.cpp
+
+game/CMakeFiles/game.dir/src/wall.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/wall.cpp.i"
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/wall.cpp > CMakeFiles/game.dir/src/wall.cpp.i
+
+game/CMakeFiles/game.dir/src/wall.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/wall.cpp.s"
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/wall.cpp -o CMakeFiles/game.dir/src/wall.cpp.s
+
+game/CMakeFiles/game.dir/src/wall.cpp.o.requires:
+
+.PHONY : game/CMakeFiles/game.dir/src/wall.cpp.o.requires
+
+game/CMakeFiles/game.dir/src/wall.cpp.o.provides: game/CMakeFiles/game.dir/src/wall.cpp.o.requires
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/src/wall.cpp.o.provides.build
+.PHONY : game/CMakeFiles/game.dir/src/wall.cpp.o.provides
+
+game/CMakeFiles/game.dir/src/wall.cpp.o.provides.build: game/CMakeFiles/game.dir/src/wall.cpp.o
+
+
 game/CMakeFiles/game.dir/src/player.cpp.o: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/player.cpp.o: ../game/src/player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object game/CMakeFiles/game.dir/src/player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/CMakeFiles/game.dir/src/player.cpp.o"
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/player.cpp.o -c /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/player.cpp
 
 game/CMakeFiles/game.dir/src/player.cpp.i: cmake_force
@@ -83,7 +107,7 @@ game/CMakeFiles/game.dir/src/player.cpp.o.provides.build: game/CMakeFiles/game.d
 
 game/CMakeFiles/game.dir/src/game_scene.cpp.o: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/game_scene.cpp.o: ../game/src/game_scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/CMakeFiles/game.dir/src/game_scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/src/game_scene.cpp.o"
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/game_scene.cpp.o -c /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/game_scene.cpp
 
 game/CMakeFiles/game.dir/src/game_scene.cpp.i: cmake_force
@@ -107,7 +131,7 @@ game/CMakeFiles/game.dir/src/game_scene.cpp.o.provides.build: game/CMakeFiles/ga
 
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: game/CMakeFiles/game.dir/flags.make
 game/CMakeFiles/game.dir/src/stage_background.cpp.o: ../game/src/stage_background.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/src/stage_background.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object game/CMakeFiles/game.dir/src/stage_background.cpp.o"
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/stage_background.cpp.o -c /home/shammyz/Documents/Repositories/IJE-AlexKidd/game/src/stage_background.cpp
 
 game/CMakeFiles/game.dir/src/stage_background.cpp.i: cmake_force
@@ -131,6 +155,7 @@ game/CMakeFiles/game.dir/src/stage_background.cpp.o.provides.build: game/CMakeFi
 
 # Object files for target game
 game_OBJECTS = \
+"CMakeFiles/game.dir/src/wall.cpp.o" \
 "CMakeFiles/game.dir/src/player.cpp.o" \
 "CMakeFiles/game.dir/src/game_scene.cpp.o" \
 "CMakeFiles/game.dir/src/stage_background.cpp.o"
@@ -138,12 +163,13 @@ game_OBJECTS = \
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
+game/libgame.a: game/CMakeFiles/game.dir/src/wall.cpp.o
 game/libgame.a: game/CMakeFiles/game.dir/src/player.cpp.o
 game/libgame.a: game/CMakeFiles/game.dir/src/game_scene.cpp.o
 game/libgame.a: game/CMakeFiles/game.dir/src/stage_background.cpp.o
 game/libgame.a: game/CMakeFiles/game.dir/build.make
 game/libgame.a: game/CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libgame.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libgame.a"
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && $(CMAKE_COMMAND) -P CMakeFiles/game.dir/cmake_clean_target.cmake
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
@@ -152,6 +178,7 @@ game/CMakeFiles/game.dir/build: game/libgame.a
 
 .PHONY : game/CMakeFiles/game.dir/build
 
+game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/src/wall.cpp.o.requires
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/src/player.cpp.o.requires
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/src/game_scene.cpp.o.requires
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/src/stage_background.cpp.o.requires

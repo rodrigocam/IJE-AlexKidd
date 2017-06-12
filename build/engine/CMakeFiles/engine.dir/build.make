@@ -345,6 +345,30 @@ engine/CMakeFiles/engine.dir/src/input_manager.cpp.o.provides: engine/CMakeFiles
 engine/CMakeFiles/engine.dir/src/input_manager.cpp.o.provides.build: engine/CMakeFiles/engine.dir/src/input_manager.cpp.o
 
 
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: engine/CMakeFiles/engine.dir/flags.make
+engine/CMakeFiles/engine.dir/src/ground.cpp.o: ../engine/src/ground.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object engine/CMakeFiles/engine.dir/src/ground.cpp.o"
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/ground.cpp.o -c /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/ground.cpp
+
+engine/CMakeFiles/engine.dir/src/ground.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/ground.cpp.i"
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/ground.cpp > CMakeFiles/engine.dir/src/ground.cpp.i
+
+engine/CMakeFiles/engine.dir/src/ground.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/ground.cpp.s"
+	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shammyz/Documents/Repositories/IJE-AlexKidd/engine/src/ground.cpp -o CMakeFiles/engine.dir/src/ground.cpp.s
+
+engine/CMakeFiles/engine.dir/src/ground.cpp.o.requires:
+
+.PHONY : engine/CMakeFiles/engine.dir/src/ground.cpp.o.requires
+
+engine/CMakeFiles/engine.dir/src/ground.cpp.o.provides: engine/CMakeFiles/engine.dir/src/ground.cpp.o.requires
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/src/ground.cpp.o.provides.build
+.PHONY : engine/CMakeFiles/engine.dir/src/ground.cpp.o.provides
+
+engine/CMakeFiles/engine.dir/src/ground.cpp.o.provides.build: engine/CMakeFiles/engine.dir/src/ground.cpp.o
+
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/src/audio.cpp.o" \
@@ -358,7 +382,8 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/src/scene.cpp.o" \
 "CMakeFiles/engine.dir/src/engine.cpp.o" \
 "CMakeFiles/engine.dir/src/scene_manager.cpp.o" \
-"CMakeFiles/engine.dir/src/input_manager.cpp.o"
+"CMakeFiles/engine.dir/src/input_manager.cpp.o" \
+"CMakeFiles/engine.dir/src/ground.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -375,9 +400,10 @@ engine/libengine.a: engine/CMakeFiles/engine.dir/src/scene.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/src/engine.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/src/input_manager.cpp.o
+engine/libengine.a: engine/CMakeFiles/engine.dir/src/ground.cpp.o
 engine/libengine.a: engine/CMakeFiles/engine.dir/build.make
 engine/libengine.a: engine/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libengine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shammyz/Documents/Repositories/IJE-AlexKidd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libengine.a"
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine && $(CMAKE_COMMAND) -P CMakeFiles/engine.dir/cmake_clean_target.cmake
 	cd /home/shammyz/Documents/Repositories/IJE-AlexKidd/build/engine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
@@ -398,6 +424,7 @@ engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/scene.cp
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/engine.cpp.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/scene_manager.cpp.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/input_manager.cpp.o.requires
+engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/src/ground.cpp.o.requires
 
 .PHONY : engine/CMakeFiles/engine.dir/requires
 

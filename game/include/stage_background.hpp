@@ -5,6 +5,8 @@
 #include "input_manager.hpp"
 #include "sprite.hpp"
 #include "player.hpp"
+#include "ground.hpp"
+#include "wall.hpp"
 
 #include <iostream>
 #include <string>
@@ -13,7 +15,8 @@ using namespace engine;
 
 class StageBackground{
 public:
-    StageBackground(std::string spritePath, int initialPosition, Player *player);
+    StageBackground(std::string spritePath, int initialPosition,
+                                            Player *player);
     ~StageBackground();
     void update(double timeElapsed);
     void draw();
@@ -23,6 +26,8 @@ public:
 private:
     Sprite *sprite;
     Player *playerReference;
+    std::vector<Ground*> groundList;
+    std::vector<Wall*> wallList;
     int spritePosition;
     void moveBackground(double &increment);
 };

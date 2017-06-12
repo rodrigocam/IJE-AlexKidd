@@ -4,15 +4,19 @@
 #include <iostream>
 #include <string>
 #include "sprite.hpp"
+#include "window_manager.hpp"
+#include "sdl2includes.hpp"
 
 namespace engine{
     class GameObject{
     public:
         GameObject(std::string objectName, double positionX, double positionY,int width, int height);
+        GameObject(double positionX, double positionY,int width, int height);
         GameObject();
         ~GameObject();
 
         virtual void draw() = 0;
+        void draw(int x, int y);
         virtual void update(double timeElapsed) = 0;
 
         std::string getName();
@@ -39,6 +43,8 @@ namespace engine{
 
         // Width and Height in pixels
         std::pair <int, int> size;
+
+        SDL_Rect *rect;
 
     };
 }

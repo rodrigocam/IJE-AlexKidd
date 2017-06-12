@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/src/engine.cpp.o"
   "CMakeFiles/engine.dir/src/scene_manager.cpp.o"
   "CMakeFiles/engine.dir/src/input_manager.cpp.o"
+  "CMakeFiles/engine.dir/src/ground.cpp.o"
   "libengine.pdb"
   "libengine.a"
 )

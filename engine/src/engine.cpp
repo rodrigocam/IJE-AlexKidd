@@ -10,7 +10,7 @@
 
 namespace engine{
 
-    const std::string GAME_NAME = "Default";
+    const std::string GAME_NAME = "Alex Kidd";
     const std::pair <int, int> WINDOW_SIZE (640, 450);
 
     SceneManager* sceneManager;
