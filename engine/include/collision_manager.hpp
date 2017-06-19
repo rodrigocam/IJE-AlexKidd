@@ -13,10 +13,12 @@ public:
     bool verifyCollisionWithWalls(GameObject* g);
     bool verifyCollisionWithEnemies(GameObject* g);
     bool verifyCollisionWithGround(GameObject* g);
-    bool verifyLateralCollisionWithGround(GameObject* g);
+    bool verifyRightCollisionWithGround(GameObject* g);
+    bool verifyLeftCollisionWithGround(GameObject* g);
     GameObject* verifyCollisionWithBoxes(GameObject* g);
     bool verifyCollision(GameObject* g1, GameObject* g2);
-    bool verifyLateralCollision(GameObject* g1, GameObject* g2);
+    bool verifyRightCollision(GameObject* g1, GameObject* g2);
+    bool verifyLeftCollision(GameObject* g1, GameObject* g2);
     void addWall(GameObject* g);
     void addEnemy(GameObject* g);
     void addGround(GameObject* g);

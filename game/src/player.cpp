@@ -9,6 +9,7 @@ Player::Player(std::string spritePath, int positionX, int positionY,
 
     animator->addAction("right",1,3);
     animator->addAction("left",20,22);
+    animator->addAction("up",5,6);
     animator->addAction("downRight",15,16);
     animator->addAction("downLeft", 32, 33);
     animator->addAction("down_idle_right", 15,15);
@@ -22,6 +23,8 @@ Player::Player(std::string spritePath, int positionX, int positionY,
     movingToRight = true;
     blockChangeDirection = false;
     movementIsBlock = false;
+    isCollidingRight = false;
+    isCollidingLeft = false;
 }
 
 Player::~Player(){}
@@ -89,21 +92,32 @@ void Player::walkInX(double & incX, double &incY){
         incX = 0;
     }
     setPositionX(getPositionX()+incX);
-    if(/*CollisionManager::instance.verifyCollisionWithWalls(this) ||*/
-       CollisionManager::instance.verifyCollisionWithGround(this)){
+    if(CollisionManager::instance.verifyCollisionWithGround(this)){
         //std::cout << "AQ" << std::endl;
         setPositionX(getPositionX()+(incX*(0-1)));
     }
-    // if(!CollisionManager::instance.verifyCollisionWithGround(this)){
-    //     setPositionY(getPositionY()+(incY*(0+1)));
-    // }
+    if(CollisionManager::instance.verifyRightCollisionWithGround(this)){
+        std::cout << "AQ" << std::endl;
+        isCollidingRight = true;
+    }else{
+        isCollidingRight = false;
+    }
+    if(CollisionManager::instance.verifyLeftCollisionWithGround(this)){
+        isCollidingLeft = true;
+    }else{
+        isCollidingLeft = false;
+    }
 }
 
 void Player::walkInY(double & incX, double & incY){
-    setPositionY(getPositionY()+incY);
+    setPositionY(getPositionY()+(incY));
+    if(InputManager::instance.isKeyPressed(InputManager::KeyPress::KEY_PRESS_UP)){
+        std::cout << "AQ" << std::endl;
+        animator->setInterval("right");
+        setPositionY(getPositionY()+incY*(0-2));
+    }
     if(CollisionManager::instance.verifyCollisionWithGround(this)){
         setPositionY(getPositionY()+(incY*(0-1)));
-        //walkInX(incX, incY);
     }
 }
 
@@ -129,4 +143,12 @@ std::string Player::getPlayerStatus(){
     }else{
         return "laydown";
     }
+}
+
+bool Player::getCollideRight(){
+    return isCollidingRight;
+}
+
+bool Player::getCollideLeft(){
+    return isCollidingLeft;
 }

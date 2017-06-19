@@ -18,6 +18,8 @@ public:
     void blockMovement();
     void unblockMovement();
     std::string getPlayerStatus();
+    bool getCollideRight();
+    bool getCollideLeft();
 
 private:
     Animation* animator;
@@ -25,6 +27,8 @@ private:
     bool movingToRight;
     bool blockChangeDirection;
     bool movementIsBlock;
+    bool isCollidingRight;
+    bool isCollidingLeft;
     int idleAnimationNumber;
     int idleDownAnimationNumber;
     void walkInX(double & incX, double & incY);

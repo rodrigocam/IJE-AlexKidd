@@ -57,9 +57,18 @@ CollisionManager CollisionManager::instance;
         return false;
     }
 
-    bool CollisionManager::verifyLateralCollisionWithGround(GameObject* g1){
+    bool CollisionManager::verifyRightCollisionWithGround(GameObject* g1){
         for(GameObject * ground : groundList) {
-            if(verifyLateralCollision(ground, g1)){
+            if(verifyRightCollision(ground, g1)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool CollisionManager::verifyLeftCollisionWithGround(GameObject* g1){
+        for(GameObject * ground : groundList) {
+            if(verifyLeftCollision(ground, g1)){
                 return true;
             }
         }
@@ -105,7 +114,7 @@ CollisionManager CollisionManager::instance;
         return true;
     }
 
-    bool CollisionManager::verifyLateralCollision( GameObject* g1, GameObject* g2){
+    bool CollisionManager::verifyRightCollision( GameObject* g1, GameObject* g2){
         //The sides of the rectangles
         int leftA, rightA, topA, bottomA;
         int leftB, rightB, topB, bottomB;
@@ -128,8 +137,44 @@ CollisionManager CollisionManager::instance;
         //std::cout << "A " << topA << std::endl;
         //std::cout << "B " << bottomB << std::endl;
         //abs(bottomB-topA) >= 50
-        if( rightA <= leftB ){ return false;}
-        if( leftA >= rightB ){ return false;}
 
-        return true;
+        //if( rightA <= leftB ){ return false;}
+        //if( leftA >= rightB ){ return false;}
+
+        if(bottomB >= topA){
+            //std::cout << "ENTROU" << std::endl;
+            if(leftA < rightB){
+                std::cout << "COLIDIU" << std::endl;
+                return true;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    bool CollisionManager::verifyLeftCollision( GameObject* g1, GameObject* g2){
+        int leftA, rightA, topA, bottomA;
+        int leftB, rightB, topB, bottomB;
+
+        //Calculate the sides of rect A
+        leftA = g1->getPositionX();
+        rightA = leftA + g1->getWidth();
+        topA = g1->getPositionY();
+        bottomA = topA + g1->getHeight();
+
+        //Calculate the sides of rect B
+        leftB = g2->getPositionX();
+        rightB = leftB + g2->getWidth();
+        topB = g2->getPositionY();
+        bottomB = topB + g2->getHeight();
+
+        if(bottomB >= topA){
+            //std::cout << "ENTROU" << std::endl;
+            if(rightA > leftB){
+                std::cout << "COLIDIU" << std::endl;
+                return true;
+            }
+        }else{
+            return false;
+        }
     }
