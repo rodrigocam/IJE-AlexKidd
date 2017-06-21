@@ -9,7 +9,7 @@ GameScene::~GameScene(){}
 
 void GameScene::draw(){
     stageOneBackground->draw();
-    player->GameObject::draw(player->getPositionX(), player->getPositionY());
+    //player->GameObject::draw(player->getPositionX(), player->getPositionY());
     for(auto gameObject : gameObjectsList) {
         (*gameObject).draw();
     }
