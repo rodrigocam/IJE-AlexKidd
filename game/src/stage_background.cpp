@@ -6,10 +6,10 @@ StageBackground::StageBackground(std::string spritePath, int initialPosition,
     spritePosition = initialPosition;
     playerReference = player;
 
-    groundList.push_back(new Ground(0,387,1152,100));
-    groundList.push_back(new Ground(1152,419,243,100));
-    groundList.push_back(new Ground(1395,387,765,100));
-    groundList.push_back(new Ground(2160,419,195,100));
+    groundList.push_back(new Ground(0,387,1130,100));
+    groundList.push_back(new Ground(1152,419,293,100));
+    groundList.push_back(new Ground(1395,387,720,100));
+    groundList.push_back(new Ground(2160,419,240,100));
     groundList.push_back(new Ground(2355,387,1152,100));
 
     for(auto ground: groundList){
@@ -22,18 +22,18 @@ StageBackground::~StageBackground(){}
 
 void StageBackground::draw(){
     sprite->draw(spritePosition, 0);
-    for(auto ground: groundList){
+    /*for(auto ground: groundList){
         //std::cout << ground->getGroundPositionX() << std::endl;
         ground->GameObject::draw(ground->getGroundPositionX(), ground->getPositionY());
-    }
+    }*/
 }
 
 void StageBackground::update(double timeElapsed){
     double increment;
     if(playerReference->getPlayerStatus().compare("standing") == 0){
-        increment = 0.20*timeElapsed;
+        increment = 0.30*timeElapsed;
     }else{
-        increment = 0.10*timeElapsed;
+        increment = 0.20*timeElapsed;
     }
     moveBackground(increment);
 }

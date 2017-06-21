@@ -29,6 +29,8 @@ private:
     bool movementIsBlock;
     bool isCollidingRight;
     bool isCollidingLeft;
+    bool isJumping;
+    bool isFalling;
     int idleAnimationNumber;
     int idleDownAnimationNumber;
     void walkInX(double & incX, double & incY);

@@ -141,10 +141,10 @@ CollisionManager CollisionManager::instance;
         //if( rightA <= leftB ){ return false;}
         //if( leftA >= rightB ){ return false;}
 
-        if(bottomB >= topA){
+        if(bottomB > topA){
             //std::cout << "ENTROU" << std::endl;
-            if(leftA < rightB){
-                std::cout << "COLIDIU" << std::endl;
+            if(leftB < rightA){
+                //std::cout << "COLIDIU" << std::endl;
                 return true;
             }
         }else{
@@ -168,10 +168,10 @@ CollisionManager CollisionManager::instance;
         topB = g2->getPositionY();
         bottomB = topB + g2->getHeight();
 
-        if(bottomB >= topA){
+        if(bottomB > topA){
             //std::cout << "ENTROU" << std::endl;
             if(rightA > leftB){
-                std::cout << "COLIDIU" << std::endl;
+                //std::cout << "COLIDIU" << std::endl;
                 return true;
             }
         }else{
